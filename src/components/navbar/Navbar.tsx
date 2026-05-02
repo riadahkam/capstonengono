@@ -3,13 +3,13 @@ import Link from 'next/link';
 
 const Navbar = () => {
   return (
-    <nav className="relative z-50 w-full flex items-center justify-between px-6 py-4 bg-[#2b3175] border-b-2 border-[#d8a436]">
+    <nav className="relative z-50 w-full flex items-center justify-between px-12 py-4 bg-[#2b3175] border-b-2 border-[#d8a436]">
       {/* Logo Section */}
       <Link href="/" className="flex items-center">
         <img
-          src="/images/ums logo.png"
+          src="/images/ums.png"
           alt="Logo Universitas Muhammadiyah Surakarta"
-          className="h-10 md:h-12 w-auto object-contain"
+          className="h-10   md:h-10 w-auto object-contain"
         />
       </Link>
 
@@ -17,7 +17,7 @@ const Navbar = () => {
       <div className="flex items-center gap-8">
         <ul className="flex items-center gap-6 text-white text-sm font-medium">
           <li>
-            <Link href="/" className="bg-[#d8a436] px-5 py-2 rounded-full hover:bg-[#c4922b] transition">
+            <Link href="/" className="bg-[#d8a436] px-5 py-2 rounded-lg hover:bg-[#c4922b] transition">
               Home
             </Link>
           </li>
@@ -49,8 +49,8 @@ const Navbar = () => {
         </div>
 
         {/* Login Button */}
-        <Link 
-          href="/login" 
+        <Link
+          href="/login"
           className="bg-[#00b0e4] hover:bg-[#009bc9] text-white text-sm font-semibold px-6 py-2 rounded-full transition"
         >
           Login

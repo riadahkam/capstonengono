@@ -5,11 +5,12 @@ const AboutSection = () => {
     <section className="bg-white py-20 px-6 lg:px-20 w-full flex flex-col items-center">
       {/* Header Section */}
       <div className="text-center max-w-3xl mb-14">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">
           Tentang IT Learning Hub
         </h2>
+        <div className="w-[150px] h-1.5 bg-[#DEAC2D] mx-auto rounded-full mb-6"></div>
         <p className="text-gray-600 text-sm md:text-base">
-          Dikembangkan oleh tim mahasiswa Teknik Informatika Universitas Muhammadiyah Surakarta
+          Dikembangkan oleh tim mahasiswa Teknik Informatika Universitas<br /> Muhammadiyah Surakarta
         </p>
       </div>
 

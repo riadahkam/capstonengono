@@ -60,7 +60,7 @@ const opportunities = [
   }
 ];
 
-import NavbarMahasiswa from '@/components/NavbarMahasiswa';
+import NavbarMahasiswa from '@/components/navbar/NavbarMahasiswa';
 
 export default async function OpportunityDetail({ params }: { params: Promise<{ id: string }> }) {
   const resolvedParams = await params;

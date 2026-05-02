@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 
-import NavbarMahasiswa from '@/components/NavbarMahasiswa';
+import NavbarMahasiswa from '@/components/navbar/NavbarMahasiswa';
 
 export default function DashboardPage() {
   const [activeFilter, setActiveFilter] = useState('Semua');

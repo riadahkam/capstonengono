@@ -1,5 +1,5 @@
 import React from 'react';
-import NavbarPerusahaan from '@/components/NavbarPerusahaan';
+import NavbarPerusahaan from '@/components/navbar/NavbarPerusahaan';
 
 export default function PerusahaanDashboardPage() {
   return (

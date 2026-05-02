@@ -5,18 +5,18 @@ const Footer = () => {
   return (
     <footer className="bg-[#2b3175] text-white pt-16 pb-8 px-6 lg:px-20 w-full font-sans">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between gap-16 mb-16">
-        
+
         {/* Left Section: Branding & Contact Info */}
         <div className="flex flex-col max-w-sm">
           <Link href="/" className="flex items-center mb-8">
             {/* Menggunakan gambar logo yang sama dengan Navbar */}
-            <img 
-              src="/images/ums logo.png" 
-              alt="Logo Universitas Muhammadiyah Surakarta" 
-              className="h-10 md:h-12 w-auto object-contain"
+            <img
+              src="/images/ums logo.png"
+              alt="Logo Universitas Muhammadiyah Surakarta"
+              className="h-14 md:h-20 w-auto object-contain"
             />
           </Link>
-          
+
           <div className="text-gray-300 text-sm leading-relaxed mb-8">
             <p>20619 Torrence Chapel Rd</p>
             <p>Suite 116 #1040</p>
@@ -38,7 +38,7 @@ const Footer = () => {
 
         {/* Right Section: Links Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-8 lg:gap-16 w-full lg:w-auto">
-          
+
           {/* Quick Links Column */}
           <div className="flex flex-col">
             <h4 className="font-semibold text-white mb-6 text-sm md:text-base">Quick links</h4>

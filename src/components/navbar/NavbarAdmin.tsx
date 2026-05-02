@@ -3,13 +3,13 @@ import Link from 'next/link';
 
 export default function NavbarAdmin() {
   return (
-    <nav className="relative z-50 w-full flex items-center justify-between px-6 py-4 bg-[#2b3175] border-b-2 border-[#d8a436]">
+    <nav className="relative z-50 w-full flex items-center justify-between px-12 py-4 bg-[#2b3175] border-b-2 border-[#d8a436]">
       {/* Logo Section */}
       <Link href="/admin" className="flex items-center">
         <img
-          src="/images/ums logo.png"
+          src="/images/ums.png"
           alt="Logo Universitas Muhammadiyah Surakarta"
-          className="h-10 md:h-12 w-auto object-contain"
+          className="h-10 md:h-10 w-auto object-contain"
         />
       </Link>
 
