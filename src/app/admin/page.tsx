@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import NavbarAdmin from '@/components/NavbarAdmin';
+import NavbarAdmin from '@/components/navbar/NavbarAdmin';
 import Footer from '@/components/Footer';
 
 export default function AdminDashboardPage() {
