@@ -67,7 +67,7 @@ export default function DashboardPage() {
 
       <NavbarMahasiswa />
 
-      <main className="max-w-7xl mx-auto px-6 mt-10">
+      <main className="max-w-7xl mx-auto px-6 mt-10 pb-20">
         <h1 className="text-[32px] font-bold text-gray-900 mb-6 tracking-tight">Jelajahi Peluang</h1>
 
         {/* Search Bar */}

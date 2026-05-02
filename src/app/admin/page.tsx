@@ -256,8 +256,6 @@ export default function AdminDashboardPage() {
           </div>
         </div>
       )}
-
-      <Footer />
     </div>
   );
 }
