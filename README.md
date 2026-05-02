@@ -36,4 +36,4 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
 kurang fitur tambah baru bagian  admin dashboard di page webinar dan bootcamp
-kurang page saat login perusahaan
+kurang page saat login  perusahaaan
