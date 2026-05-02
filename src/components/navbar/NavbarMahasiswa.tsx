@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function NavbarMahasiswa() {
   return (
-    <nav className="relative z-50 w-full flex items-center justify-between px-12 py-4 bg-[#2b3175] border-b-2 border-[#d8a436]">
+    <nav className="relative z-50 w-full flex items-center justify-between px-12 py-4 bg-[#2b3175] border-b-4 border-[#d8a436]">
       {/* Logo Section */}
       <Link href="/" className="flex items-center">
         <img
@@ -12,7 +12,7 @@ export default function NavbarMahasiswa() {
           className="h-10 md:h-10 w-auto object-contain"
         />
       </Link>
-      
+
       <div className="flex items-center gap-4">
         <span className="text-sm font-semibold text-white">Halo, Mahasiswa!</span>
         <div className="w-9 h-9 rounded-full bg-blue-100 flex items-center justify-center text-[#2b3175] font-bold shadow-md">

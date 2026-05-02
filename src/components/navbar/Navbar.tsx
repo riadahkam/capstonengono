@@ -1,15 +1,25 @@
+"use client";
+
 import React from 'react';
 import Link from 'next/link';
 
 const Navbar = () => {
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, id: string) => {
+    e.preventDefault();
+    const target = document.getElementById(id);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
-    <nav className="relative z-50 w-full flex items-center justify-between px-12 py-4 bg-[#2b3175] border-b-2 border-[#d8a436]">
+    <nav className="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-12 py-4 bg-[#2b3175] border-b-4 border-[#d8a436]">
       {/* Logo Section */}
       <Link href="/" className="flex items-center">
         <img
           src="/images/ums.png"
           alt="Logo Universitas Muhammadiyah Surakarta"
-          className="h-10   md:h-10 w-auto object-contain"
+          className="h-10 md:h-10 w-auto object-contain"
         />
       </Link>
 
@@ -17,19 +27,19 @@ const Navbar = () => {
       <div className="flex items-center gap-8">
         <ul className="flex items-center gap-6 text-white text-sm font-medium">
           <li>
-            <Link href="/" className="bg-[#d8a436] px-5 py-2 rounded-lg hover:bg-[#c4922b] transition">
+            <a href="#home" onClick={(e) => handleScroll(e, 'home')} className="cursor-pointer px-5 py-2 rounded-lg hover:bg-[#d8a436] transition-all duration-300">
               Home
-            </Link>
+            </a>
           </li>
           <li>
-            <Link href="/tentang-kami" className="hover:text-gray-200 transition">
+            <a href="#tentang-kami" onClick={(e) => handleScroll(e, 'tentang-kami')} className="cursor-pointer px-5 py-2 rounded-lg hover:bg-[#d8a436] transition-all duration-300">
               Tentang Kami
-            </Link>
+            </a>
           </li>
           <li>
-            <Link href="/panduan" className="hover:text-gray-200 transition">
+            <a href="#panduan" onClick={(e) => handleScroll(e, 'panduan')} className="cursor-pointer px-5 py-2 rounded-lg hover:bg-[#d8a436] transition-all duration-300">
               Panduan
-            </Link>
+            </a>
           </li>
         </ul>
 

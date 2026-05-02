@@ -58,12 +58,13 @@ export default function DashboardPage() {
 
   const filters = ["Semua", "Webinar", "Bootcamp", "Magang"];
 
-  const filteredOpportunities = opportunities.filter((item) => 
+  const filteredOpportunities = opportunities.filter((item) =>
     activeFilter === "Semua" ? true : item.type === activeFilter
   );
 
   return (
-    <div className="min-h-screen bg-[#fafafa] font-sans pb-20">
+    <div className="h-screen bg-[#fafafa] font-sans overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+
       <NavbarMahasiswa />
 
       <main className="max-w-7xl mx-auto px-6 mt-10">
@@ -76,9 +77,9 @@ export default function DashboardPage() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
           </div>
-          <input 
-            type="text" 
-            placeholder="Cari webinar, bootcamp, atau magang..." 
+          <input
+            type="text"
+            placeholder="Cari webinar, bootcamp, atau magang..."
             className="w-full pl-12 pr-4 py-3.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#2b3175] text-gray-700 bg-white shadow-sm transition"
           />
         </div>
@@ -86,14 +87,13 @@ export default function DashboardPage() {
         {/* Filters */}
         <div className="flex flex-wrap items-center gap-3 mb-10">
           {filters.map((filter) => (
-            <button 
+            <button
               key={filter}
               onClick={() => setActiveFilter(filter)}
-              className={`px-6 py-2 rounded-full text-sm font-semibold transition shadow-sm ${
-                activeFilter === filter 
-                  ? 'bg-[#2b3175] text-white hover:bg-[#20255c]' 
-                  : 'bg-white text-gray-700 border border-gray-200 hover:bg-gray-50'
-              }`}
+              className={`px-6 py-2 rounded-full text-sm font-semibold transition shadow-sm ${activeFilter === filter
+                ? 'bg-[#2b3175] text-white hover:bg-[#20255c]'
+                : 'bg-white text-gray-700 border border-gray-200 hover:bg-gray-50'
+                }`}
             >
               {filter}
             </button>
@@ -104,20 +104,18 @@ export default function DashboardPage() {
         {filteredOpportunities.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredOpportunities.map((item) => (
-              <Link href={`/dashboard/${item.id}`} key={item.id} className="bg-white rounded-2xl border border-gray-100 p-6 flex flex-col shadow-sm hover:shadow-md hover:border-[#2b3175] transition group cursor-pointer block">
-                
+              <Link href={`/dashboard/${item.id}`} key={item.id} className="bg-white rounded-2xl border-2 border-gray-100 p-6 flex flex-col shadow-md hover:shadow-md hover:shadow-[#2F3185] hover:border-[#2F3185] transition group cursor-pointer block">
+
                 {/* Card Tags */}
                 <div className="flex items-center gap-2 mb-4">
-                  <span className={`px-3 py-1 rounded-full text-[11px] font-bold tracking-wide uppercase ${
-                    item.type === 'Webinar' ? 'bg-blue-50 text-blue-600' :
+                  <span className={`px-3 py-1 rounded-full text-[11px] font-bold tracking-wide uppercase ${item.type === 'Webinar' ? 'bg-blue-50 text-blue-600' :
                     item.type === 'Bootcamp' ? 'bg-purple-50 text-purple-600' :
-                    'bg-teal-50 text-teal-600'
-                  }`}>
+                      'bg-teal-50 text-teal-600'
+                    }`}>
                     {item.type}
                   </span>
-                  <span className={`px-3 py-1 rounded-full text-[11px] font-bold tracking-wide uppercase ${
-                    item.status === 'Aktif' ? 'bg-green-50 text-green-600' : 'bg-yellow-50 text-yellow-600'
-                  }`}>
+                  <span className={`px-3 py-1 rounded-full text-[11px] font-bold tracking-wide uppercase ${item.status === 'Aktif' ? 'bg-green-50 text-green-600' : 'bg-yellow-50 text-yellow-600'
+                    }`}>
                     {item.status}
                   </span>
                 </div>

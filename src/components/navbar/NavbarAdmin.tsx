@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function NavbarAdmin() {
   return (
-    <nav className="relative z-50 w-full flex items-center justify-between px-12 py-4 bg-[#2b3175] border-b-2 border-[#d8a436]">
+    <nav className="relative z-50 w-full flex items-center justify-between px-12 py-4 bg-[#2b3175] border-b-4 border-[#d8a436]">
       {/* Logo Section */}
       <Link href="/admin" className="flex items-center">
         <img

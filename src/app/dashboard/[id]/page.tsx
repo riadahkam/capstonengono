@@ -80,30 +80,29 @@ export default async function OpportunityDetail({ params }: { params: Promise<{ 
   }
 
   return (
-    <div className="min-h-screen bg-[#fafafa] font-sans pb-20">
+    <div className="h-screen bg-[#fafafa] font-sans overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+
       <NavbarMahasiswa />
-      
+
       <div className="max-w-4xl mx-auto pt-10 px-6">
         {/* Back Button */}
         <Link href="/dashboard" className="text-gray-500 hover:text-[#2b3175] flex items-center gap-2 mb-6 text-sm font-semibold transition w-fit">
           &larr; Kembali
         </Link>
-        
+
         {/* Detail Card */}
         <div className="bg-white rounded-[2rem] border border-gray-100 p-8 md:p-12 shadow-sm">
-          
+
           {/* Header Tags */}
           <div className="flex items-center gap-3 mb-6">
-            <span className={`px-4 py-1.5 rounded-full text-xs font-bold tracking-wide uppercase ${
-              data.type === 'Webinar' ? 'bg-blue-50 text-blue-600' :
+            <span className={`px-4 py-1.5 rounded-full text-xs font-bold tracking-wide uppercase ${data.type === 'Webinar' ? 'bg-blue-50 text-blue-600' :
               data.type === 'Bootcamp' ? 'bg-purple-50 text-purple-600' :
-              'bg-teal-50 text-teal-600'
-            }`}>
+                'bg-teal-50 text-teal-600'
+              }`}>
               {data.type}
             </span>
-            <span className={`px-4 py-1.5 rounded-full text-xs font-bold tracking-wide uppercase ${
-              data.status === 'Aktif' ? 'bg-green-50 text-green-600' : 'bg-yellow-50 text-yellow-600'
-            }`}>
+            <span className={`px-4 py-1.5 rounded-full text-xs font-bold tracking-wide uppercase ${data.status === 'Aktif' ? 'bg-green-50 text-green-600' : 'bg-yellow-50 text-yellow-600'
+              }`}>
               {data.status}
             </span>
           </div>
@@ -112,7 +111,7 @@ export default async function OpportunityDetail({ params }: { params: Promise<{ 
           <h1 className="text-3xl md:text-[34px] font-bold text-[#1a202c] mb-4 tracking-tight leading-snug">
             {data.title}
           </h1>
-          
+
           {/* Deadline */}
           <p className="text-gray-500 text-sm mb-10">
             Deadline: <span className="font-medium text-gray-700">{data.date}</span>
@@ -140,13 +139,13 @@ export default async function OpportunityDetail({ params }: { params: Promise<{ 
           </div>
 
           {/* Poin SKPI Box */}
-          <div className="bg-[#f2fafd] rounded-xl p-6 mb-10 border border-blue-50">
+          <div className="bg-[#AEAFDF]/55 rounded-xl p-6 mb-10 border border-blue-50">
             <h3 className="font-bold text-gray-900 text-base mb-2">Poin SKPI / Konversi</h3>
-            <p className="text-[#00b0e4] font-bold text-sm">{data.skpi}</p>
+            <p className="text-[#2F3185] font-bold text-sm">{data.skpi}</p>
           </div>
 
           {/* Action Button */}
-          <button className="w-full bg-[#1da1d8] hover:bg-[#158bbd] text-white font-bold py-4 rounded-xl transition shadow-md flex justify-center items-center gap-2 text-lg mb-6">
+          <button className="w-full bg-[#2F3185] hover:bg-[#DEAC2D] text-white font-bold py-4 rounded-xl transition shadow-md flex justify-center items-center gap-2 text-lg mb-6">
             Daftar di Sumber Asli
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
           </button>

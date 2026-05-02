@@ -11,7 +11,7 @@ export default function LoginPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     alert(`Login berhasil sebagai ${role}! Selamat datang di IT Learning Hub.`);
-    
+
     if (role === 'Mahasiswa') {
       router.push('/dashboard');
     } else if (role === 'Admin') {
@@ -22,8 +22,8 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#2b3175] flex flex-col items-center justify-center p-6 font-sans">
-      
+    <div className="h-screen bg-[#2b3175] flex flex-col items-center justify-center p-6 font-sans">
+
       {/* Header text */}
       <div className="text-center mb-8 text-white">
         <h1 className="text-3xl md:text-4xl font-bold mb-3 tracking-tight">Masuk Ke IT Learning Hub</h1>
@@ -32,25 +32,25 @@ export default function LoginPage() {
 
       {/* Main Card */}
       <div className="bg-white rounded-[2rem] p-8 md:p-12 w-full max-w-2xl shadow-2xl">
-        
+
         {/* Role Toggle */}
         <div className="flex bg-[#f3f4f6] rounded-full p-2 mb-10">
-          <button 
-            type="button" 
+          <button
+            type="button"
             onClick={() => setRole('Mahasiswa')}
             className={`flex-1 text-center py-3 text-sm font-semibold rounded-full transition ${role === 'Mahasiswa' ? 'text-white bg-[#2b3175] shadow-md' : 'text-gray-500 hover:bg-gray-200'}`}
           >
             Mahasiswa
           </button>
-          <button 
-            type="button" 
+          <button
+            type="button"
             onClick={() => setRole('Admin')}
             className={`flex-1 text-center py-3 text-sm font-semibold rounded-full transition ${role === 'Admin' ? 'text-white bg-[#2b3175] shadow-md' : 'text-gray-500 hover:bg-gray-200'}`}
           >
             Admin
           </button>
-          <button 
-            type="button" 
+          <button
+            type="button"
             onClick={() => setRole('Perusahaan')}
             className={`flex-1 text-center py-3 text-sm font-semibold rounded-full transition ${role === 'Perusahaan' ? 'text-white bg-[#2b3175] shadow-md' : 'text-gray-500 hover:bg-gray-200'}`}
           >
@@ -63,8 +63,8 @@ export default function LoginPage() {
           {/* Email Field */}
           <div className="flex flex-col gap-2">
             <label className="font-bold text-gray-900 text-sm md:text-base ml-1">Email</label>
-            <input 
-              type="email" 
+            <input
+              type="email"
               className="bg-[#f3f4f6] rounded-2xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-[#2b3175] transition text-gray-800"
               required
             />
@@ -73,16 +73,16 @@ export default function LoginPage() {
           {/* Password Field */}
           <div className="flex flex-col gap-2">
             <label className="font-bold text-gray-900 text-sm md:text-base ml-1">Password</label>
-            <input 
-              type="password" 
+            <input
+              type="password"
               className="bg-[#f3f4f6] rounded-2xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-[#2b3175] transition text-gray-800"
               required
             />
           </div>
 
           {/* Submit Button */}
-          <button 
-            type="submit" 
+          <button
+            type="submit"
             className="w-full bg-[#2b3175] hover:bg-[#20255c] text-white font-semibold py-4 rounded-2xl mt-4 transition shadow-lg text-lg"
           >
             Masuk

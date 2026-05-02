@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Navbar from '../components/navbar/Navbar';
 import AboutSection from '../components/AboutSection';
 import HowItWorksSection from '../components/HowItWorksSection';
@@ -5,9 +6,9 @@ import Footer from '../components/Footer';
 
 export default function Home() {
   return (
-    <div className="font-sans flex flex-col w-full">
+    <div className="h-screen font-sans flex flex-col w-full overflow-y-auto scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
       {/* Top Background Section containing Navbar & Hero */}
-      <div className="min-h-screen bg-[#2b3175] flex flex-col">
+      <div id="home" className="min-h-screen bg-[#2b3175] flex flex-col pt-28">
         <Navbar />
 
         {/* Hero Section */}
@@ -20,7 +21,7 @@ export default function Home() {
             Agregator, Bootcamp, dan Magang Terintegrasi untuk Mahasiswa
           </p>
 
-          <button className="bg-[#d8a436] hover:bg-[#c4922b] transition text-white font-medium px-8 py-3 rounded-md flex items-center gap-2 group">
+          <Link href="/login" className="bg-[#d8a436] hover:bg-[#c4922b] transition text-white font-medium px-8 py-3 rounded-md flex items-center gap-2 group">
             Jelajahi Peluang
             <svg
               className="w-5 h-5 group-hover:translate-x-1 transition-transform"
@@ -31,15 +32,19 @@ export default function Home() {
             >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-          </button>
+          </Link>
         </main>
       </div>
 
       {/* About Section (White Background) */}
-      <AboutSection />
+      <div id="tentang-kami">
+        <AboutSection />
+      </div>
 
       {/* How It Works Section */}
-      <HowItWorksSection />
+      <div id="panduan">
+        <HowItWorksSection />
+      </div>
 
       {/* Footer Section */}
       <Footer />
